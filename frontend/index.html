@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Remover | Pro Object Eraser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+    </div>
+
+    <div class="glass-container">
+        <header>
+            <h1>✨ Magic Remover</h1>
+            <p>Hapus objek mengganggu dengan sekejap.</p>
+        </header>
+
+        <div class="toolbar">
+            <label class="btn upload-btn">
+                📂 Unggah Foto
+                <input type="file" id="uploadInput" accept="image/jpeg, image/png" hidden>
+            </label>
+            <div class="brush-controls">
+                <label for="brushSize">Ukuran Kuas:</label>
+                <input type="range" id="brushSize" min="5" max="50" value="20">
+            </div>
+            <button id="clearBtn" class="btn secondary-btn">Batal Coret</button>
+            <button id="processBtn" class="btn primary-btn" disabled>🪄 Proses Gambar</button>
+        </div>
+
+        <div class="workspace">
+            <div id="canvasContainer" class="canvas-wrapper hidden">
+                <!-- Layer 1: Gambar Asli -->
+                <canvas id="imageCanvas"></canvas>
+                <!-- Layer 2: Transparan untuk coret-coret -->
+                <canvas id="drawCanvas"></canvas>
+            </div>
+            <div id="emptyState" class="empty-state">
+                <p>Belum ada gambar. Unggah foto untuk mulai.</p>
+            </div>
+            <!-- Loading Overlay -->
+            <div id="loading" class="loading-overlay hidden">
+                <div class="spinner"></div>
+                <p>AI sedang bekerja...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
