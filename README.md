@@ -48,7 +48,7 @@ Pastikan kamu sudah menginstal [Python 3.8+](https://www.python.org/downloads/) 
 ```
    python main.py
 ```
-Server backend akan berjalan di
+5. Server backend akan berjalan di
 ```
 http://0.0.0.0:8000
 atau
